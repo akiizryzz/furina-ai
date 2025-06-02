@@ -84,7 +84,7 @@ function typeWriter(element, text, speed = 30) {
     addMessage('Furina sedang mengetik...', 'loading');
 
     try {
-      const apiUrl = `https://www.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=user`;
+      const apiUrl = `https://www.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=${user || 'user'}`;
       const response = await fetch(apiUrl);
       const data = await response.json();
 
