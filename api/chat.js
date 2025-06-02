@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     if (status) {
      res.status(200).json({ status: true, statusText: 'OK', statusCode: 200, result: { message: data.result.message }, creator: 'furinn.team' })
     } else {
-     res.status(400).json({ status: false, result: { message: data.result.message }, creator: 'furinn.team' })
+     res.status(400).json({ status: false, result: { message: "Maaf, kayanya Furina lagi kecapean nih😥, nanti lagi ya😊" }, creator: 'furinn.team' })
     }
   } catch (error) {
     res.status(500).json({ status: false, message: error.message })
