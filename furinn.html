@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🫧 Furina AI - Chat Bot</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/furinnTeam/tmp/refs/heads/main/ofc-logo(without_bg).png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="https://raw.githubusercontent.com/furinnTeam/tmp/refs/heads/main/ofc-logo(without_bg).png" alt="Logo" style="width:32px; height:32px;" />
+      Furina AI - Chat Bot
+    </h1>
+  </header>
+  <main>
+    <section id="chat-container" aria-live="polite" aria-relevant="additions">
+      <p>Welcome to AI Chat! 🤖<br />Start typing below to chat.</p>
+    </section>
+    <form id="input-container" aria-label="Send message form" onsubmit="return false;">
+      <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off" aria-label="Message input" required spellcheck="false" />
+      <button id="send-button" type="submit" aria-label="Send message" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </form>
+  </main>
+  <footer>
+    © FurinaAI by <a href="https://t.me/kyzryzz" target="_blank" rel="noopener noreferrer"><span style="font-weight:600;">Kyz</span></a>. 2025 All Rights Reserved
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
