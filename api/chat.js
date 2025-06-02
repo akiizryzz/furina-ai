@@ -13,7 +13,12 @@ export default async function handler(req, res) {
     const apiUrl = `https://www.furinnteam.web.id/ai/furina?content=${encodeURIComponent(content)}&user=${encodeURIComponent(user || 'user')}`
     const response = await fetch(apiUrl)
     const data = await response.json()
-    res.status(200).json({ status: true, statusText: 'OK', statusCode: 200, result: { message: data.result.message }, creator: 'furinn.team' })
+    let status = data.status
+    if (status) {
+     res.status(200).json({ status: true, statusText: 'OK', statusCode: 200, result: { message: data.result.message }, creator: 'furinn.team' })
+    } else {
+     res.status(400).json({ status: false, result: { message: data.result.message }, creator: 'furinn.team' })
+    }
   } catch (error) {
     res.status(500).json({ status: false, message: error.message })
   }
