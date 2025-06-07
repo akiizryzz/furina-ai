@@ -85,7 +85,7 @@ function typeWriter(element, text, speed = 30) {
 
     try {
       const response = await fetch(`https://api.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=user`);
-      const data = response.json();
+      const data = await response.json();
 
       const loadingElements = chatContainer.querySelectorAll('.message.loading');
       if (loadingElements.length) loadingElements[loadingElements.length - 1].remove();
