@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return
   }
   try {
-    const apiUrl = `https://www.furinnteam.web.id/ai/furina?content=${encodeURIComponent(content)}&user=${encodeURIComponent(user || 'user')}`
+    const apiUrl = `https://api.furinnteam.web.id/ai/furina?content=${encodeURIComponent(content)}&user=${encodeURIComponent(user || 'user')}`
     const response = await fetch(apiUrl)
     const data = await response.json()
     let status = data.status
