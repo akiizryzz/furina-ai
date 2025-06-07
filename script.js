@@ -84,9 +84,8 @@ function typeWriter(element, text, speed = 30) {
     addMessage('Furina sedang mengetik...', 'loading');
 
     try {
-      const apiUrl = `https://www.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=user`;
-      const response = await fetch(apiUrl);
-      const data = await response.json();
+      const response = await fetch(`https://api.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=user`);
+      const data = response.json();
 
       const loadingElements = chatContainer.querySelectorAll('.message.loading');
       if (loadingElements.length) loadingElements[loadingElements.length - 1].remove();
